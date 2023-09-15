@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>JS-day2</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <style>
+      .my-div {width: 25px; height: 25px;background-color:red; margin:1px; display:inline-block; width: 40px; height: 40px;}
+    </style>
+   
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <h1>Exercise 2</h1>
+    <div id="outer">
+      <div id="d1" class="my-div"></div>
+      <div id="d2"class="my-div"></div>
+      <div id="d3"class="my-div"></div>
+      <div id="d4"class="my-div"></div>
+      <div id="d5"class="my-div"></div>
+      <div id="d6"class="my-div"></div>
+      <div id="d7"class="my-div"></div>
+      <div id="d8"class="my-div"></div>
+      <div id="d9"class="my-div"></div>
+      <div id="d10"class="my-div"></div>
+</div>
+<h6></h6>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+   <!-- Optional JavaScript; choose one of the two! -->
+   <script>
+    // document.querySelector("#d1").addEventListener("click", () => {
+    //   alert("Hi from div 1");
+    // });
+    // document.querySelector("#d2").addEventListener("click", () => {
+    //   alert("Hi from div 2");
+    // });
+    document.querySelector("#outer").addEventListener("click", (e) => {
+      document.querySelector("h6").innerHTML = `Hi from div ${e.target.id}`;
+      // alert(`Hi from div ${e.target.id}`); //denne laver en popup med samme tekst
+    });
+  </script>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
