@@ -19,18 +19,24 @@
   </header>
   <main>
     <h1>Exercise 1</h1>
-    <div id="d1" style="width: 100px;margin: 1px;">&nbsp;</div>
-    <div id="d2" style="width: 100px;margin: 1px;">&nbsp;</div>
-    <div id="d3" style="width: 100px;margin: 1px;">&nbsp;</div>
-    <button class="btn btn-primary" type="button">Change Colors</button> 
+    <div class="divs" id="d1" style="width: 100px;margin: 1px;">&nbsp;</div>
+    <div class="divs" id="d2" style="width: 100px;margin: 1px;">&nbsp;</div>
+    <div class="divs" id="d3" style="width: 100px;margin: 1px;">&nbsp;</div>
+    <button class="btn btn-primary mt-1" type="button">Change Colors</button> 
+
+    <div class="mt-2" style="border: 1px solid black; border-radius: 5px;padding: 1em;">
+      Reflect on when you would use a <b>select-element</b>. For a few (perhaps max 10) or many more possible options?<br>
+      Explain in words that clearly show that you understand what you did to solve this problem
+    </div>
    </main>
+<div class="mt-1"><a href="/"class="mx-1"> <button type="button" class="btn btn-primary">Back</button></a></div>
   <footer>
     <!-- place footer here -->
   </footer>
   <!-- Optional JavaScript; choose one of the two! -->
   <script>
   
-    const divElements = document.querySelectorAll("div");
+    const divElements = document.querySelectorAll(".divs");
     divElements.forEach((divElement) => {
       divElement.style.backgroundColor = "red";
     });
