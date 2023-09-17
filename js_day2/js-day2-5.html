@@ -37,14 +37,20 @@
 </div>
     <h3>Reflections</h3>
         <div style="border: 1px solid black; border-radius: 5px;padding: 1em;">
-            Replace this with your explanation of the following</br>
             <ul>
-                <li>The JavaScript "template string" and where/how you have used it</li>
-                <li>How and where you have used the map-method</li>
-                <li>How and where you have used the filter-method</li>
-                <li>How did you get the updated list, when a user had used the filter or sort functionality</li>
-            </ul>
-            Feel free to write in danish
+                <li>Template string har jeg anvendt i funktionen makeTable til at generere table data <br>  
+                  <strong>`<tr>
+                    <td>${car.id}</td>
+                    <td>${car.year}</td>
+                    <td>${car.make}</td>
+                    <td>${car.model}</td>
+                    <td>${car.price}</td>
+                    </tr>`</strong>
+                <li>Map er anvendt i samme funktion til at udfylde placeholder værdierne car.id, car.year</li>
+                <li>Filter metoden er anvendt til at kunne sortere på om cars har mindre value end det i input feltet.
+                  det sorterede resultat anvendes så som argument i metoden makeTable. </li>
+                <li>Sort metoden er //TODO</li>
+                </ul>
         </div>
 <div class="mt-1"></div><a href="/"class="mx-1"> <button type="button" class="btn btn-primary">Back</button></a></div>
 
