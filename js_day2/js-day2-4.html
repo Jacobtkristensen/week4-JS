@@ -19,10 +19,34 @@
   </header>
   <main>
     <h1>Exercise 4</h1>
+    
+    <select id="car-selector">
+      <!-- Options will be populated by JavaScript -->
+    </select>
+    <h2>Selected Brand</h2>
+    <h4 id="car-make"></h4>
+    
+    
+   
+<div style="border: 1px solid black; border-radius: 5px;padding: 1em;">
+  <h3>Reflections</h3>
+  Reflect on when you would use a <b>select-element</b>. For a few (perhaps max 10) or many more possible options?<br>
+  Explain in words that clearly show that you understand what you did to solve this problem
+</div>
   </main>
   <footer>
     <!-- place footer here -->
   </footer>
+  <script>
+    const cars = ["Ford", "VW", "Toyota", "Volvo"]; //Assume this was fetched from the backend
+    const carSelect = document.getElementById("car-selector").innerHTML = cars.map(car => `<option>${car}</option>`).join("");
+
+    document.getElementById("car-selector").onchange = (event) => {
+      const selectedCar = event.target.value;
+      document.getElementById("car-make").innerHTML = selectedCar;
+    }
+    </script>
+    
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">

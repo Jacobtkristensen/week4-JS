@@ -19,10 +19,71 @@
   </header>
   <main>
     <h1>Exercise 5</h1>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Year</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Price</th>
+      </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+  </table>
+  <input id="price-input" placeholder="Enter price ">
+  <button class="btn btn-primary" type="button" id="btn-filter">Price less than</button>
+  <button class="btn btn-primary" type="button" id="btn-clear">Clear</button>
+</div>
+    <h3>Reflections</h3>
+        <div style="border: 1px solid black; border-radius: 5px;padding: 1em;">
+            Replace this with your explanation of the following</br>
+            <ul>
+                <li>The JavaScript "template string" and where/how you have used it</li>
+                <li>How and where you have used the map-method</li>
+                <li>How and where you have used the filter-method</li>
+                <li>How did you get the updated list, when a user had used the filter or sort functionality</li>
+            </ul>
+            Feel free to write in danish
+        </div>
   </main>
   <footer>
     <!-- place footer here -->
   </footer>
+  <script> 
+  const cars = [ 
+  { id: 1, year: 1997, make: 'Ford', model: 'E350', price: 3000 },
+  { id: 2, year: 1999, make: 'Chevy', model: 'Venture', price: 4900 },
+  { id: 3, year: 2000, make: 'Chevy', model: 'Venture', price: 5000 },
+  { id: 4, year: 1996, make: 'Jeep', model: 'Grand Cherokee', price: 4799 },
+  { id: 5, year: 2005, make: 'Volvo', model: 'V70', price: 44799 }
+];
+function makeTable(carsMap) {
+const trows = carsMap.map(car => 
+`<tr>
+  <td>${car.id}</td>
+  <td>${car.year}</td>
+  <td>${car.make}</td>
+  <td>${car.model}</td>
+  <td>${car.price}</td>
+  </tr>`).join("");
+  const tbody = document.getElementById("tbody").innerHTML = trows;
+}
+makeTable(cars);
+
+document.getElementById("btn-filter").onclick = () => {
+  const price = document.getElementById("price-input").value;
+  const filteredCars = cars.filter(car => car.price < price);
+  makeTable(filteredCars);
+}
+document.getElementById("btn-clear").onclick = () => {
+  makeTable(cars);
+  document.getElementById("price-input").value = "";
+}
+function sortByMake() {
+//TODO
+}
+  </script>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">

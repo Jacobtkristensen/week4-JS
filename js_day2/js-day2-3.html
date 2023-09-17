@@ -19,13 +19,58 @@
   </header>
   <main>
     <h1>Exercise 3</h1>
+    <button id="btn-initialize">Initialize</button>
+    <ul id="ul1"></ul>
+
+    <form>
+      <input type="text" id="name-input" placeholder="Enter name">
+      <button id="btn-add">Add Name</button>
+      <button id="remove-first">Remove first</button>
+      <button id="remove-last">Remove last</button>
+      
+    </form>
+    <div style="margin: 1em 0;">
+      <a href="/">back</a>
+  </div>
+  <div style="border: 1px solid black; border-radius: 5px;padding: 1em;">
+    Replace this with your explanation of the concepts</br>
+    <ul>
+        <li>Where and why you used the event-method <code>preventDefault()</code></li>
+        <li>Even if not done in this exercise, what do you have to be aware of when using the innerHTML field</li>
+        <li>How did you change the DOM-list with all the names when you added, removed a name?<br>
+             By manipulating a single DOM element, or by rebuilding the whole UL using the new version of the data</li>
+    </ul>
+    Feel free to write in danish
+</div>
   </main>
-  <footer>
-    <!-- place footer here -->
-  </footer>
    <!-- Optional JavaScript; choose one of the two! -->
-   <script>
-   
+  <script>
+    const namesList = ["Lars", "Peter", "Jan", "Ian"];
+    function Initialize() {
+      const lis = namesList.map(name => `<li>${name}</li>`).join("");
+      document.getElementById("ul1").innerHTML = lis;
+    }
+    document.getElementById("btn-initialize").onclick = () => Initialize();
+
+    //add name
+    document.getElementById("btn-add").onclick = (event) => {
+      event.preventDefault();
+      const name = document.getElementById("name-input").value;
+      namesList.push(name);
+      Initialize();
+    }
+    //remove first
+    document.getElementById("remove-first").onclick = (event) => {
+      event.preventDefault();
+      namesList.shift();
+      Initialize();
+    }
+    //remove last
+    document.getElementById("remove-last").onclick = (event) => {
+      event.preventDefault();
+      namesList.pop();
+      Initialize();
+    }
   </script>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
