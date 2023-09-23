@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -90,20 +90,41 @@
           
           
           
-          <button id="add-car">Submit new item</button>
+          <button id="add-car">Add Car</button>
           <p id="new-car-response">Show returned data, if any</p>
           <p>Use one of the two GET pages to verify that "something" was added</p>
         </div>
 
         <!--########################  EDIT A CAR OR MEMBER ########################-->
         <div class="col">
-          <h3>Edit a Car or a Member</h3>
-          <label for="text-for-id2">Id</label>&nbsp;<input id="text-for-id2" />
-          <button>Find item to edit</button>
+          <h3>Edit Car</h3>
+          <label for="text-for-id2">Id</label>&nbsp;<input id="text-for-id2"/>
+          <button id="btn-find-car2">Find</button>
           <p>Show what you find here, and let users edit fields</p>
-          <p>......</p>
-          <button>Submit edited item</button>
-          <p>Use one of the two GET pages to verify that "something" was added</p>
+          <form id="carForm2">
+            <div class="mb-3">
+                
+              <input type="text" class="form-control" id="id2" name="id" hidden>
+            </div>
+              <div class="mb-3">
+                <label for="brand2" class="form-label">Brand</label>
+                <input type="text" class="form-control" id="brand2" name="brand" required>
+            </div>
+            <div class="mb-3">
+                <label for="model2" class="form-label">Model</label>
+                <input type="text" class="form-control" id="model2" name="model" required>
+            </div>
+            <div class="mb-3">
+                <label for="pricePrDay2" class="form-label">Price per Day</label>
+                <input type="number" class="form-control" id="pricePrDay2" name="pricePrDay" step="0.01" required>
+            </div>
+            <div class="mb-3">
+                <label for="bestDiscount2" class="form-label">Best Discount</label>
+                <input type="number" class="form-control" id="bestDiscount2" name="bestDiscount" required>
+            </div>
+            <button type="button" class="" id="edit-car">Submit Edit</button>
+            <p id="updated-car"></p>
+        </form>          
         </div>
       </div>
     </div>
