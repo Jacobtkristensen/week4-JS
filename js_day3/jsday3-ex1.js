@@ -39,8 +39,3 @@ fetch(SERVER_URL + "/" + id)
     
   });
 }
-   // Inside this callback, AND ONLY HERE the response data is available
-   
-  /* data now contains the response, converted to JavaScript
-     Observe the output from the log-output above
-     Now, just build your DOM changes using the data inside this block*/       
