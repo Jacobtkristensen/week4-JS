@@ -7,8 +7,8 @@ export function initAddCar(){
 
 
 async function addCar(evt){
-  evt.preventDefault()
-  evt = alert("Car added. Please refresh the page to see the new car or check console.")
+  // evt.preventDefault()
+  // evt = alert("Car added. Please refresh the page to see the new car or check console.")
   //Get Cars from form
   const car = {
     brand : document.getElementById("brand").value,
